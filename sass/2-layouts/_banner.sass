@@ -1,0 +1,64 @@
+@use '../1-base/base-mixins'
+@use 'layouts-mixins'
+@use '../1-base/_variables'
+@use '../3-modules/modules-mixins'
+
+.banners
+   @include layouts-mixins.center-content
+   padding: 3rem 1rem
+
+   @include base-mixins.mobile
+      flex-direction: column
+      align-items: center
+
+   .banner
+      width: 30%
+      height: 200px
+      color: variables.$light-color
+      outline: 1px solid #0000000c
+      transition: .4s
+      @include modules-mixins.center-bg
+      background-size: 100%
+      position: relative
+
+      @include base-mixins.mobile
+         width: 80%
+         margin: 1rem
+
+      &:hover
+         background-size: 110%
+
+      &-cover
+         background-color: variables.$primary-color
+         width: 70%
+         height: 100%
+         opacity: .6
+         border-bottom-right-radius: 4rem
+
+      &-content
+         position: absolute
+         top: 0
+         left: 0
+         padding: 2rem
+
+         h2
+            font-size: 1.3rem
+            margin-bottom: 1rem
+            max-width: 70%
+
+         a
+            font-size: .6rem
+            color: variables.$blue-color
+            display: flex
+            align-items: center
+
+         i
+            margin-left: .6rem
+
+   #banner-1 
+      @include modules-mixins.bg-image('imagem-1.jpg')       
+   #banner-2
+      @include modules-mixins.bg-image('imagem-2.jpg') 
+   #banner-3      
+      @include modules-mixins.bg-image('camera-.jpg')
+      

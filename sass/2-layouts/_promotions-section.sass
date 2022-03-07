@@ -1,0 +1,64 @@
+@use 'layouts-mixins'
+@use '../1-base/base-mixins'
+@use '../1-base/_variables'
+
+.promotions
+   background-color: #edb81f
+   height: 400px
+   padding: 2rem
+   @include base-mixins.mobile
+      height: auto
+
+   &-container
+      padding: 1rem 1rem
+      background-image: url(../../img/promocao.png)
+      background-repeat: no-repeat
+      background-size: 25%
+      background-position-x: 90%
+      background-position-y: 2rem
+      @include base-mixins.mobile
+         background-size: 40%
+         background-position-x: 100%
+         background-position-y: 66%
+
+      &-content
+         @include layouts-mixins.center-content
+
+         height: 100%
+         flex-direction: column
+         align-items: center
+         justify-content: center
+         @include base-mixins.mobile
+            text-align: center
+
+         .promotions-timers
+            display: flex
+            margin-bottom: 1rem
+            @include base-mixins.mobile
+               flex-wrap: wrap
+               align-self: center
+               justify-content: center
+
+            .promotions-timer
+               width: 100px
+               height: 100px
+               border-radius: 50%
+               background-color: red
+               color: variables.$light-color
+               display: flex
+               flex-direction: column
+               align-items: center
+               justify-content: center
+               margin: 0 .6rem
+               @include base-mixins.mobile
+                  margin-bottom: 1rem
+
+               .timer-time
+                  font-weight: bold
+                  font-size: 1.3rem
+      h2
+         margin-bottom: 1rem
+         text-transform: uppercase
+
+      p
+         margin-bottom: 1rem

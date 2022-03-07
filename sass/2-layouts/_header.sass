@@ -1,0 +1,150 @@
+@use '../1-base/variables'
+@use '../1-base/base-mixins'
+@use '../2-layouts/layouts-mixins'
+
+.header
+   background-image: linear-gradient(#0c1b33,#004666,#007786,)
+   font-size: 14px
+
+   &-top
+      background-color: variables.$black-color
+      color: variables.$light-color
+
+      @include base-mixins.mobile
+         display: none
+
+      &-container
+         @include layouts-mixins.center-content
+         padding: .6rem 1rem
+         @include base-mixins.laptop
+            display: flex
+            flex-direction: column
+
+         span
+            margin-right: 1rem
+            font-size: .8rem
+
+         i
+            margin-right: .3rem
+         a
+            color: variables.$light-color
+
+   //2
+   &-main
+      &-container
+         @include layouts-mixins.center-content
+         padding: 2rem 1rem
+         position: relative
+
+         @include base-mixins.mobile
+            flex-direction: column
+            align-items: center
+
+         a,span,i
+            color: variables.$light-color
+            font-weight: 800
+
+         #brand
+            display: inline-block
+
+            img
+               width: 200px
+               height: auto
+
+         #btn-mobile
+            display: none          
+            
+            @include base-mixins.mobile
+               display: block
+               position: absolute
+               top: 1rem
+               right: 1rem
+               font-size: 1.6rem
+               cursor: pointer
+
+               .fas:hover
+                  opacity: 0.9
+                  color: variables.$primary-color        
+
+         #menu-mobile
+            display: none           
+            z-index: 1000       
+               
+         #menu-mobile.active
+            @include base-mixins.mobile     
+               display: flex
+               position: absolute
+               top: 4rem
+               right: 0
+               width: 100% 
+               ul
+                  display: block            
+                  background-color: #000000cb
+                  width: 100%
+                  li
+                     width: 100%
+                     padding: 0 1rem
+                     
+                     margin: 0
+                     a
+                        display: inline-block
+                        width: 100%
+                        font-size: 1.3rem
+                        font-weight: 100
+                        text-align: left
+                        margin-bottom: 1rem
+                                              
+                        &:hover
+                           color: variables.$primary-color
+                           text-decoration: underline 
+                           
+         #form-search
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            width: 45%
+
+            @include base-mixins.mobile
+               width: 100%
+               margin: 1rem 0
+               justify-content: center
+
+            input
+               height: 40px
+               padding: 0 1rem
+
+            #search
+               width: 60%
+               @include layouts-mixins.rounded-input
+
+      .header-actions-menu
+         display: flex
+         align-items: center
+
+         .wishlist-container,.header-card-container
+            @include layouts-mixins.header-icon
+            @include base-mixins.mobile
+               margin: 1rem
+
+   &-bottom
+
+      background-color: variables.$yellow-color
+
+      &-container
+         @include layouts-mixins.center-content
+         padding: .3rem 1rem
+         ul
+            display: flex
+            @include base-mixins.mobile
+               display: none
+            li
+               margin-right: 1rem
+               a
+                  font-size: .9rem
+                  color: variables.$light-color
+                  text-shadow: 1px 1px 3px 3px gray
+                  border-bottom: transparent
+
+                  &:hover
+                     color: variables.$primary-color
+                     border-bottom: 2px solid variables.$primary-color

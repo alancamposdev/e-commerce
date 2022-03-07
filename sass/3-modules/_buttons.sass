@@ -1,0 +1,23 @@
+@use '../1-base/_variables'
+
+.btn
+   padding: 8px 15px
+   height: 40px
+   color: variables.$light-color
+   background-color: variables.$primary-color
+   border-radius: 1rem
+   border: 2px solid //ver a cor
+   font-weight: bold
+   text-transform: uppercase
+   cursor: pointer
+   outline: none
+   transition: .4s
+   &:hover
+      background-color: #fff
+      color: variables.$blue-color
+      border-color: variables.$blue-color
+
+   &-two
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      text-transform: none
