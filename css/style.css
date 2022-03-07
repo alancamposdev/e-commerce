@@ -288,13 +288,16 @@
 .banners .banner-content i {
   margin-left: 0.6rem;
 }
-.banners #banner-1 {
+
+#banner-1 {
   background-image: url(/img/imagem-1.jpg);
 }
-.banners #banner-2 {
+
+#banner-2 {
   background-image: url(/img/imagem-2.jpg);
 }
-.banners #banner-3 {
+
+#banner-3 {
   background-image: url(/img/camera-.jpg);
 }
 
