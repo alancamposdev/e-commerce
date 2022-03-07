@@ -31,6 +31,8 @@ para visualizar o projeto é só abaixar todos os arquivos em uma pasta e abrir 
 
 #### Resultado: ✨ 
 
+Acesse  o projeto clicando aqui [>> página do projeto <<](https://alancamposdev.github.io/e-commerce/)
+
 **Desktop:**
 
 ![layout desktop](img/layout-laptop.png)
