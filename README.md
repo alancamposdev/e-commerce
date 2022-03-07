@@ -17,7 +17,7 @@
 - estilizado com a linguagem  de marcação CSS3
 - usando um facilitador o Sass, que adiciona mais recursos ao CSS
 - menu responsivo feito na linguagem de programa JavaScript;
-- imagens retirada do site:[google imagens, classificadas como domínio público]: https://www.google.com.br/imghp?hl=pt-BR&ogbl/ e ícones Font Awesome
+- imagens retirada do site da google images classificadas como domínio público  e ícones Font Awesome
 - projeto estruturado em pastas conforme seu significado.
 - CSS minificado via SASS gerando economia de espaço de memória com um arquivo menor
 
