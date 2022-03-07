@@ -20,6 +20,7 @@
       @include modules-mixins.center-bg
       background-size: 100%
       position: relative
+      cursor: pointer
 
       @include base-mixins.mobile
          width: 80%
@@ -56,9 +57,10 @@
             margin-left: .6rem
 
    #banner-1 
-      @include modules-mixins.bg-image('imagem-1.jpg')       
+      background-image: url(/img/imagem-1.jpg)    
    #banner-2
-      @include modules-mixins.bg-image('imagem-2.jpg') 
-   #banner-3      
-      @include modules-mixins.bg-image('camera-.jpg')
+     background-image: url(/img/imagem-2.jpg)
+   #banner-3
+      background-image: url(/img/camera-.jpg)     
+      
       
